@@ -20,7 +20,7 @@ namespace Game
             {"Default", "1", "4", "1", "1",
             "1", "30", "30", "8", "8",
             "0", "0", "0", "0", "0",
-            "0", "0", "40", "10", "1", "0", "40"};
+            "0", "0", "40", "10", "1", "0", "40", "1"};
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 foreach (string line in lines)
@@ -30,7 +30,7 @@ namespace Game
                 }
             }
         }
-        //-------------------------------------------ЧТЕНИЕ---ИМЕНИ--ИГРОКА-------------------------------
+        //-------------------------------------------ЧТЕНИЕ---ИМЕНИ--ИГРОКА-----0--------------------------
         public string GetPlayerName()
         {
             string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
@@ -50,7 +50,7 @@ namespace Game
                 return "none";
             }
         }
-        //-------------------------------------------ЧТЕНИЕ---LEVEL--ИГРОКА-------------------------------
+        //-------------------------------------------ЧТЕНИЕ---LEVEL--ИГРОКА----1---------------------------
         public int GetPlayerLevel()
         {
             string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
@@ -999,7 +999,7 @@ namespace Game
                     try
                     {
                         string[] lines = File.ReadAllLines(filePath);
-                        lines[17] = setPlayerExpForNextLvlFarm.ToString();
+                        lines[21] = setPlayerExpForNextLvlFarm.ToString();
                         File.WriteAllLines(filePath, lines);
                     }
                     catch (Exception ex)
@@ -1015,7 +1015,7 @@ namespace Game
                     try
                     {
                         string[] lines = File.ReadAllLines(filePath);
-                        lines[17] = setPlayerExpForNextLvlFarm.ToString();
+                        lines[21] = setPlayerExpForNextLvlFarm.ToString();
                         File.WriteAllLines(filePath, lines);
                     }
                     catch (Exception ex)
@@ -1031,7 +1031,7 @@ namespace Game
                     try
                     {
                         string[] lines = File.ReadAllLines(filePath);
-                        lines[17] = setPlayerExpForNextLvlFarm.ToString();
+                        lines[21] = setPlayerExpForNextLvlFarm.ToString();
                         File.WriteAllLines(filePath, lines);
                     }
                     catch (Exception ex)
@@ -1047,7 +1047,7 @@ namespace Game
                     try
                     {
                         string[] lines = File.ReadAllLines(filePath);
-                        lines[17] = setPlayerExpForNextLvlFarm.ToString();
+                        lines[21] = setPlayerExpForNextLvlFarm.ToString();
                         File.WriteAllLines(filePath, lines);
                     }
                     catch (Exception ex)
@@ -1063,7 +1063,7 @@ namespace Game
                     try
                     {
                         string[] lines = File.ReadAllLines(filePath);
-                        lines[17] = setPlayerExpForNextLvlFarm.ToString();
+                        lines[21] = setPlayerExpForNextLvlFarm.ToString();
                         File.WriteAllLines(filePath, lines);
                     }
                     catch (Exception ex)
@@ -1079,7 +1079,7 @@ namespace Game
                     try
                     {
                         string[] lines = File.ReadAllLines(filePath);
-                        lines[17] = setPlayerExpForNextLvlFarm.ToString();
+                        lines[21] = setPlayerExpForNextLvlFarm.ToString();
                         File.WriteAllLines(filePath, lines);
                     }
                     catch (Exception ex)
@@ -1095,7 +1095,7 @@ namespace Game
                     try
                     {
                         string[] lines = File.ReadAllLines(filePath);
-                        lines[17] = setPlayerExpForNextLvlFarm.ToString();
+                        lines[21] = setPlayerExpForNextLvlFarm.ToString();
                         File.WriteAllLines(filePath, lines);
                     }
                     catch (Exception ex)

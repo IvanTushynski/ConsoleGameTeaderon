@@ -40,7 +40,7 @@ namespace Game.SaveLoadSystem
 
                 //уменьшение денег
                 string directoryPathMoney = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
-                string filePathMoney = Path.Combine(directoryPathMoney, "gameitemdata.txt");
+                string filePathMoney = Path.Combine(directoryPathMoney, "gameplayerdata.txt");
                 int setBootsPlayerMoney = loadSavePlayer.GetPlayerBronze() - 1;
                 {
                     try
@@ -160,7 +160,7 @@ namespace Game.SaveLoadSystem
 
                 //уменьшение денег
                 string directoryPathMoney = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
-                string filePathMoney = Path.Combine(directoryPathMoney, "gameitemdata.txt");
+                string filePathMoney = Path.Combine(directoryPathMoney, "gameplayerdata.txt");
                 int setBootsPlayerMoney = loadSavePlayer.GetPlayerBronze() - 20;
                 {
                     try
@@ -281,13 +281,13 @@ namespace Game.SaveLoadSystem
 
                 //уменьшение денег
                 string directoryPathMoney = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
-                string filePathMoney = Path.Combine(directoryPathMoney, "gameitemdata.txt");
+                string filePathMoney = Path.Combine(directoryPathMoney, "gameplayerdata.txt");
                 int setBootsPlayerMoney = loadSavePlayer.GetPlayerSilver() - 1;
                 {
                     try
                     {
                         string[] lines = File.ReadAllLines(filePathMoney);
-                        lines[10] = setBootsPlayerMoney.ToString();
+                        lines[11] = setBootsPlayerMoney.ToString();
                         File.WriteAllLines(filePathMoney, lines);
 
                     }
@@ -374,7 +374,7 @@ namespace Game.SaveLoadSystem
         }
         //###############################################################Small######Mp######################################################################
         //-------------------------------------------Покупка---Small--Mp--Pitions----------------------------
-        public void RecordSmallMpPotionPlus()
+        public void BuySmallMpPotionPlus()
         {
             LoadSavePlayer loadSavePlayer = new LoadSavePlayer();
             LoadSaveItems loadSaveItems = new LoadSaveItems();
@@ -390,7 +390,7 @@ namespace Game.SaveLoadSystem
                     try
                     {
                         string[] lines = File.ReadAllLines(filePath);
-                        lines[5] = setBootsPlayer.ToString();
+                        lines[8] = setBootsPlayer.ToString();
                         File.WriteAllLines(filePath, lines);
 
                     }
@@ -402,7 +402,7 @@ namespace Game.SaveLoadSystem
 
                 //уменьшение денег
                 string directoryPathMoney = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
-                string filePathMoney = Path.Combine(directoryPathMoney, "gameitemdata.txt");
+                string filePathMoney = Path.Combine(directoryPathMoney, "gameplayerdata.txt");
                 int setBootsPlayerMoney = loadSavePlayer.GetPlayerBronze() - 1;
                 {
                     try
@@ -495,7 +495,7 @@ namespace Game.SaveLoadSystem
         }
         //##############################################################Normal#####Mp##########################################################
         //-------------------------------------------Покупка---Normal--Mp--Pitions----------------------------
-        public void RecordNormalMpPotionPlus()
+        public void BuyNormalMpPotionPlus()
         {
             LoadSavePlayer loadSavePlayer = new LoadSavePlayer();
             LoadSaveItems loadSaveItems = new LoadSaveItems();
@@ -523,7 +523,7 @@ namespace Game.SaveLoadSystem
 
                 //уменьшение денег
                 string directoryPathMoney = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
-                string filePathMoney = Path.Combine(directoryPathMoney, "gameitemdata.txt");
+                string filePathMoney = Path.Combine(directoryPathMoney, "gameplayerdata.txt");
                 int setBootsPlayerMoney = loadSavePlayer.GetPlayerBronze() - 20;
                 {
                     try
@@ -616,7 +616,7 @@ namespace Game.SaveLoadSystem
         }
         //############################################################Large######Mp###########################################################
         //-------------------------------------------Покупка---Large--Mp--Potions----------------------------
-        public void RecordLargeMpPotionPlus()
+        public void BuyLargeMpPotionPlus()
         {
             LoadSavePlayer loadSavePlayer = new LoadSavePlayer();
             LoadSaveItems loadSaveItems = new LoadSaveItems();
@@ -644,13 +644,13 @@ namespace Game.SaveLoadSystem
 
                 //уменьшение денег
                 string directoryPathMoney = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
-                string filePathMoney = Path.Combine(directoryPathMoney, "gameitemdata.txt");
+                string filePathMoney = Path.Combine(directoryPathMoney, "gameplayerdata.txt");
                 int setBootsPlayerMoney = loadSavePlayer.GetPlayerSilver() - 1;
                 {
                     try
                     {
                         string[] lines = File.ReadAllLines(filePathMoney);
-                        lines[10] = setBootsPlayerMoney.ToString();
+                        lines[11] = setBootsPlayerMoney.ToString();
                         File.WriteAllLines(filePathMoney, lines);
 
                     }

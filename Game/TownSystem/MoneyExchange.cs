@@ -15,12 +15,12 @@ namespace Game.TownSystem
         {
             LoadSavePlayer loadSavePlayer = new LoadSavePlayer();
 
-            if (loadSavePlayer.GetPlayerBronze() >= 64)
+            if (loadSavePlayer.GetPlayerBronze() >= 100)
             {
                 //уменьшение денег
                 string directoryPathMoneyMinus = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
                 string filePathMoneyMinus = Path.Combine(directoryPathMoneyMinus, "gameplayerdata.txt");
-                int setPlayerMoneyMinus = loadSavePlayer.GetPlayerBronze() - 64;
+                int setPlayerMoneyMinus = loadSavePlayer.GetPlayerBronze() - 100;
                 {
                     try
                     {
@@ -90,7 +90,7 @@ namespace Game.TownSystem
                 //увеличение денег
                 string directoryPathMoneyPlus = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
                 string filePathMoneyPlus = Path.Combine(directoryPathMoneyPlus, "gameplayerdata.txt");
-                int setPlayerMoneyPlus = loadSavePlayer.GetPlayerBronze() + 64;
+                int setPlayerMoneyPlus = loadSavePlayer.GetPlayerBronze() + 100;
                 {
                     try
                     {
@@ -117,12 +117,12 @@ namespace Game.TownSystem
         {
             LoadSavePlayer loadSavePlayer = new LoadSavePlayer();
 
-            if (loadSavePlayer.GetPlayerSilver() >= 64)
+            if (loadSavePlayer.GetPlayerSilver() >= 100)
             {
                 //уменьшение денег
                 string directoryPathMoneyMinus = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
                 string filePathMoneyMinus = Path.Combine(directoryPathMoneyMinus, "gameplayerdata.txt");
-                int setPlayerMoneyMinus = loadSavePlayer.GetPlayerSilver() - 64;
+                int setPlayerMoneyMinus = loadSavePlayer.GetPlayerSilver() - 100;
                 {
                     try
                     {
@@ -192,7 +192,7 @@ namespace Game.TownSystem
                 //увеличение денег
                 string directoryPathMoneyPlus = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
                 string filePathMoneyPlus = Path.Combine(directoryPathMoneyPlus, "gameplayerdata.txt");
-                int setPlayerMoneyPlus = loadSavePlayer.GetPlayerSilver() + 64;
+                int setPlayerMoneyPlus = loadSavePlayer.GetPlayerSilver() + 100;
                 {
                     try
                     {

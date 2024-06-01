@@ -4,6 +4,7 @@ using Game.DropSystem;
 using Game.Enemies;
 using Game.FarmSystem;
 using Game.SaveLoadSystem;
+using Game.SkillsSystem;
 using Game.TownSystem;
 
 internal class Program
@@ -44,6 +45,8 @@ internal class Program
         WeaponAndArmorShop weaponAndArmorShop = new WeaponAndArmorShop();
         DropFreavell drop = new DropFreavell();
         ResourcesFarm resourcesFarm = new ResourcesFarm();
+        BerserkSkillFreavell berserkSkillFreavell = new BerserkSkillFreavell();
+        TestConsoleBattleFreavell testConsoleBattleFreavell = new TestConsoleBattleFreavell();
 
 
         for (int i = 1; i > 0; i++) 
@@ -53,7 +56,7 @@ internal class Program
             Console.WriteLine("Сброс статов Предметов и Игрока: 2");
             Console.WriteLine("Дроп с босса: 3");
             Console.WriteLine("Использование малой банки HP +20: 4");
-            Console.WriteLine("Купить Банки HP: 5");
+            Console.WriteLine("Купить Банки HP/MP: 5");
             Console.WriteLine("Прокачка Персонажа: 6");
             Console.WriteLine("Статистика: 7");
             Console.WriteLine("Фарм Енергии: 8");
@@ -64,44 +67,7 @@ internal class Program
             int learn = Convert.ToInt32(Console.ReadLine());
             if (learn == 1)
             {
-                for (int iTwo = 1; iTwo > 0; iTwo++)
-                {
-                    Console.WriteLine("-----------ТЕСТОВОЕ-МЕНЮ-БИТВЫ---------");
-                    Console.WriteLine(loadSavePlayer.GetPlayerHp() + "/" + loadSavePlayer.GetPlayerMaxHp() + ": Здоровье игрока");
-                    Console.WriteLine(loadSaveItems.GetItemHpSmallPotion() + ": Оставшиеся Малые Банки HP");
-                    Console.WriteLine(loadSaveItems.GetItemHpNormalPotion() + ": Оставшиеся Средние Банки HP");
-                    Console.WriteLine(loadSaveItems.GetItemHpLargePotion() + ": Оставшиеся Большие Банки HP");
-                    Console.WriteLine("-------------------------------------------");
-                    Console.WriteLine("Атака: 1");
-                    Console.WriteLine("Бонка НР: 2");
-                    Console.WriteLine("Выход: 3");
-                    Console.WriteLine("-------------------------------------------");
-                    int learnBattle = Convert.ToInt32(Console.ReadLine());
-                    if (learnBattle == 1)
-                    {
-                        battlePlayerFreavell.AttackEnemyFreavellOne();
-                        Thread.Sleep(2000);
-                        battleMonsterFreavell.AttackEnemyFreavellOne();
-                    }
-                    else if (learnBattle == 2)
-                    {
-                        bottles.UseSmallHpPotion();
-                        Thread.Sleep(2000);
-                        if (battleMonsterFreavell.GetEnemyHp() > 0)
-                        {
-                            battleMonsterFreavell.AttackEnemyFreavellOne();
-                        }
-                        else
-                        {
-
-                        }
-                    }
-                    else if (learnBattle == 3)
-                    {
-                        battleMonsterFreavell.RecordEnemyHpFreavellOne();
-                        break;
-                    }
-                }
+                testConsoleBattleFreavell.TestBattleOne();
             }
             if (learn == 2)
             {
@@ -136,10 +102,17 @@ internal class Program
                 bottles.BuySmallHpPotionPlus();
                 bottles.BuyNormalHpPotionPlus();
                 bottles.BuyLargeHpPotionPlus();
+                bottles.BuySmallMpPotionPlus();
+                bottles.BuyNormalMpPotionPlus();
+                bottles.BuyLargeMpPotionPlus();
                 Console.WriteLine("--------------------------------------------");
                 Console.WriteLine(loadSaveItems.GetItemHpSmallPotion() + ": Оставшиеся Малые Банки HP");
                 Console.WriteLine(loadSaveItems.GetItemHpNormalPotion() + ": Оставшиеся Средние Банки HP");
                 Console.WriteLine(loadSaveItems.GetItemHpLargePotion() + ": Оставшиеся Большие Банки HP");
+                Console.WriteLine("--------------------------------------------");
+                Console.WriteLine(loadSaveItems.GetItemMpSmallPotion() + ": Оставшиеся Малые Банки MP");
+                Console.WriteLine(loadSaveItems.GetItemMpNormalPotion() + ": Оставшиеся Средние Банки MP");
+                Console.WriteLine(loadSaveItems.GetItemMpLargePotion() + ": Оставшиеся Большие Банки MP");
                 Console.WriteLine("--------------------------------------------");
             }
             else if (learn == 6)
@@ -165,6 +138,9 @@ internal class Program
                 Console.WriteLine(loadSaveItems.GetItemHpSmallPotion() + ": Оставшиеся Малые Банки HP");
                 Console.WriteLine(loadSaveItems.GetItemHpNormalPotion() + ": Оставшиеся Средние Банки HP");
                 Console.WriteLine(loadSaveItems.GetItemHpLargePotion() + ": Оставшиеся Большие Банки HP");
+                Console.WriteLine(loadSaveItems.GetItemMpSmallPotion() + ": Оставшиеся Малые Банки MP");
+                Console.WriteLine(loadSaveItems.GetItemMpNormalPotion() + ": Оставшиеся Средние Банки MP");
+                Console.WriteLine(loadSaveItems.GetItemMpLargePotion() + ": Оставшиеся Большие Банки MP");
                 Console.WriteLine(loadSavePlayer.GetPlayerEnergy() + " Очков Енергии");
                 Console.WriteLine("Бронза:" + loadSavePlayer.GetPlayerBronze());
                 Console.WriteLine("Серебро:" + loadSavePlayer.GetPlayerSilver());

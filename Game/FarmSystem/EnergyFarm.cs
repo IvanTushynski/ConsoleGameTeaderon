@@ -47,13 +47,13 @@ namespace Game.FarmSystem
 
                                 //##############################################################################################################
                                 //Запись дропа экспы
-                                int expDropFarm = loadSavePlayer.GetPlayerExpAmountFarm() + 4;
+                                int expDropFarm = loadSavePlayer.GetPlayerExpAmountFarm() + 12;
                                 string directoryPathFarm = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
                                 string filePathFarm = Path.Combine(directoryPathFarm, "gameplayerdata.txt");
                                 string[] linesFarm = File.ReadAllLines(filePathFarm);
                                 linesFarm[20] = expDropFarm.ToString();
                                 File.WriteAllLines(filePathFarm, linesFarm);
-                                Console.WriteLine("Получено 4 очка Опыта Профессий");
+                                Console.WriteLine("Получено 12 очков Опыта Профессий");
                                 //прокрутка и если нужно повышение уровня
                                 levelUpSystem.RecordPlayerLevelUpFarm();
                         }
@@ -77,13 +77,13 @@ namespace Game.FarmSystem
 
                             //##############################################################################################################
                             //Запись дропа экспы
-                            int expDropFarm = loadSavePlayer.GetPlayerExpAmountFarm() + 2;
+                            int expDropFarm = loadSavePlayer.GetPlayerExpAmountFarm() + 8;
                             string directoryPathFarm = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
                             string filePathFarm = Path.Combine(directoryPathFarm, "gameplayerdata.txt");
                             string[] linesFarm = File.ReadAllLines(filePathFarm);
-                            linesFarm[1206] = expDropFarm.ToString();
+                            linesFarm[20] = expDropFarm.ToString();
                             File.WriteAllLines(filePathFarm, linesFarm);
-                            Console.WriteLine("Получено 2 очка Опыта Профессий");
+                            Console.WriteLine("Получено 8 очков Опыта Профессий");
                             //прокрутка и если нужно повышение уровня
                             levelUpSystem.RecordPlayerLevelUpFarm();
                         }
@@ -107,13 +107,13 @@ namespace Game.FarmSystem
 
                             //##############################################################################################################
                             //Запись дропа экспы
-                            int expDropFarm = loadSavePlayer.GetPlayerExpAmountFarm() + 1;
+                            int expDropFarm = loadSavePlayer.GetPlayerExpAmountFarm() + 4;
                             string directoryPathFarm = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
                             string filePathFarm = Path.Combine(directoryPathFarm, "gameplayerdata.txt");
                             string[] linesFarm = File.ReadAllLines(filePathFarm);
                             linesFarm[20] = expDropFarm.ToString();
                             File.WriteAllLines(filePathFarm, linesFarm);
-                            Console.WriteLine("Получено 1 очко Опыта Профессий");
+                            Console.WriteLine("Получено 4 очка Опыта Профессий");
                             //прокрутка и если нужно повышение уровня
                             levelUpSystem.RecordPlayerLevelUpFarm();
                         }
