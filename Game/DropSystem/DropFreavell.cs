@@ -1,5 +1,6 @@
 ﻿using Game.BattleSystem;
 using Game.Enemies;
+using Game.QuestSystem;
 using Game.SaveLoadSystem;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,8 @@ namespace Game.DropSystem
     {
         EnemyFreavell enemyFreavell = new EnemyFreavell();
         LoadSavePlayer loadSavePlayer = new LoadSavePlayer();
-        LevelUpSystem levelUpSystem = new LevelUpSystem();  
+        LevelUpSystem levelUpSystem = new LevelUpSystem();
+        FreavellQuests freavellQuests = new FreavellQuests();
         Random rand = new Random();
         public void DropFreavellOne()
         {
@@ -26,6 +28,8 @@ namespace Game.DropSystem
             File.WriteAllLines(filePath, lines);
             //прокрутка и если нужно повышение уровня
             levelUpSystem.RecordPlayerLevelUp();
+            //прокрутка записи квестов
+            freavellQuests.RecordFreavellQuestMonsters();
 
             //####################################################################################################################
             //Запись энергии игрока
@@ -76,6 +80,8 @@ namespace Game.DropSystem
             File.WriteAllLines(filePath, lines);
             //прокрутка и если нужно повышение уровня
             levelUpSystem.RecordPlayerLevelUp();
+            //прокрутка записи квестов
+            freavellQuests.RecordFreavellQuestMonsters();
 
             //Рандом дропа голды
             int randomBronzeDrop = rand.Next(1, 11);
@@ -117,6 +123,8 @@ namespace Game.DropSystem
             File.WriteAllLines(filePath, lines);
             //прокрутка и если нужно повышение уровня
             levelUpSystem.RecordPlayerLevelUp();
+            //прокрутка записи квестов
+            freavellQuests.RecordFreavellQuestMonsters();
 
             //Рандом дропа голды
             int randomBronzeDrop = rand.Next(1, 11);
@@ -158,6 +166,8 @@ namespace Game.DropSystem
             File.WriteAllLines(filePath, lines);
             //прокрутка и если нужно повышение уровня
             levelUpSystem.RecordPlayerLevelUp();
+            //прокрутка записи квестов
+            freavellQuests.RecordFreavellQuestMonsters();
 
             //Рандом дропа голды
             int randomBronzeDrop = rand.Next(1, 11);
@@ -199,6 +209,8 @@ namespace Game.DropSystem
             File.WriteAllLines(filePath, lines);
             //прокрутка и если нужно повышение уровня
             levelUpSystem.RecordPlayerLevelUp();
+            //прокрутка записи квестов
+            freavellQuests.RecordFreavellQuestMonsters();
 
             //Рандом дропа голды
             int randomBronzeDrop = rand.Next(1, 11);
@@ -243,6 +255,8 @@ namespace Game.DropSystem
             File.WriteAllLines(filePath, lines);
             //прокрутка и если нужно повышение уровня
             levelUpSystem.RecordPlayerLevelUp();
+            //прокрутка записи квестов
+            freavellQuests.RecordFreavellQuestMonsters();
 
             //Рандом дропа голды
             int randomBronzeDrop = rand.Next(1, 11);
@@ -303,6 +317,8 @@ namespace Game.DropSystem
             File.WriteAllLines(filePath, lines);
             //прокрутка и если нужно повышение уровня
             levelUpSystem.RecordPlayerLevelUp();
+            //прокрутка записи квестов
+            freavellQuests.RecordFreavellQuestMonsters();
 
             //Рандом дропа голды
             int randomBronzeDrop = rand.Next(1, 11);
@@ -363,6 +379,8 @@ namespace Game.DropSystem
             File.WriteAllLines(filePath, lines);
             //прокрутка и если нужно повышение уровня
             levelUpSystem.RecordPlayerLevelUp();
+            //прокрутка записи квестов
+            freavellQuests.RecordFreavellQuestMonsters();
 
             //Рандом дропа голды
             int randomBronzeDrop = rand.Next(1, 11);

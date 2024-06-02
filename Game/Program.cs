@@ -3,6 +3,7 @@ using Game.BattleSystem;
 using Game.DropSystem;
 using Game.Enemies;
 using Game.FarmSystem;
+using Game.QuestSystem;
 using Game.SaveLoadSystem;
 using Game.SkillsSystem;
 using Game.TownSystem;
@@ -45,9 +46,8 @@ internal class Program
         WeaponAndArmorShop weaponAndArmorShop = new WeaponAndArmorShop();
         DropFreavell drop = new DropFreavell();
         ResourcesFarm resourcesFarm = new ResourcesFarm();
-        BerserkSkillFreavell berserkSkillFreavell = new BerserkSkillFreavell();
         TestConsoleBattleFreavell testConsoleBattleFreavell = new TestConsoleBattleFreavell();
-
+        FreavellQuests freavellQuests = new FreavellQuests();
 
         for (int i = 1; i > 0; i++) 
         {
@@ -73,6 +73,7 @@ internal class Program
             {
                 loadSavePlayer.ResetPlayerDataBase();
                 loadSaveItems.ResetItemDataBase();
+                freavellQuests.ResetFreavellQuest();
             }
             else if (learn == 3)
             {
@@ -142,6 +143,8 @@ internal class Program
                 Console.WriteLine(loadSaveItems.GetItemMpNormalPotion() + ": Оставшиеся Средние Банки MP");
                 Console.WriteLine(loadSaveItems.GetItemMpLargePotion() + ": Оставшиеся Большие Банки MP");
                 Console.WriteLine(loadSavePlayer.GetPlayerEnergy() + " Очков Енергии");
+                Console.WriteLine(freavellQuests.GetFreavellQuestMonsters() + " Убитых Существ Фреавелла");
+                Console.WriteLine(freavellQuests.GetFreavellQuestFarm() + " Добыто ресурсов, еды, энергии");
                 Console.WriteLine("Бронза:" + loadSavePlayer.GetPlayerBronze());
                 Console.WriteLine("Серебро:" + loadSavePlayer.GetPlayerSilver());
                 Console.WriteLine("Золото:" + loadSavePlayer.GetPlayerGold());

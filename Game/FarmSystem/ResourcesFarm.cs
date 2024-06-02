@@ -1,4 +1,5 @@
-﻿using Game.SaveLoadSystem;
+﻿using Game.QuestSystem;
+using Game.SaveLoadSystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace Game.FarmSystem
         {
             LoadSavePlayer loadSavePlayer = new LoadSavePlayer();
             LevelUpSystem levelUpSystem = new LevelUpSystem();
+            FreavellQuests freavellQuests = new FreavellQuests();
 
             if (loadSavePlayer.GetPlayerLevelFarm() >= 2 && loadSavePlayer.GetPlayerEnergy() >= 1)
             {
@@ -25,6 +27,8 @@ namespace Game.FarmSystem
                 linesResourcesSell[18] = EnergyResourcesSell.ToString();
                 File.WriteAllLines(filePathResourcesSell, linesResourcesSell);
                 Console.WriteLine("Оплачено: " + EnergyResourcesSell + " Энергии");
+                //прокрутка записи квестов
+                freavellQuests.RecordFreavellQuestFarm();
 
                 Console.WriteLine("1: Добыча ресурсов начата! Ждите!");
 

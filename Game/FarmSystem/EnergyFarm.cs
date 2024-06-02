@@ -1,4 +1,5 @@
 ﻿using Game.Enemies;
+using Game.QuestSystem;
 using Game.SaveLoadSystem;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,9 @@ namespace Game.FarmSystem
         {
                 LoadSavePlayer loadSavePlayer = new LoadSavePlayer();
                 LevelUpSystem levelUpSystem = new LevelUpSystem();
+                FreavellQuests freavellQuests = new FreavellQuests();
 
-                if (loadSavePlayer.GetPlayerLevelFarm() >= 1 && loadSavePlayer.GetPlayerBronze() >= 1)
+            if (loadSavePlayer.GetPlayerLevelFarm() >= 1 && loadSavePlayer.GetPlayerBronze() >= 1)
                 {
                     //оплата крафта энергии
                     int BronzeEnergySell = loadSavePlayer.GetPlayerBronze() - 1;
@@ -25,8 +27,10 @@ namespace Game.FarmSystem
                     linesEnergySell[10] = BronzeEnergySell.ToString();
                     File.WriteAllLines(filePathEnergySell, linesEnergySell);
                     Console.WriteLine("Оплачено: " + "1" + " Бронзы");
+                    //прокрутка записи квестов
+                    freavellQuests.RecordFreavellQuestFarm();
 
-                    Console.WriteLine("1: Создание потусторонеей Энергии начато! Ждите!");
+                Console.WriteLine("1: Создание потусторонеей Энергии начато! Ждите!");
 
                     Random random = new Random();
                     string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory/*, "bin", "Debug", "net8.0-windows"*/);
