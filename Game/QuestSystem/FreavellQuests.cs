@@ -90,7 +90,7 @@ namespace Game.QuestSystem
                 }
             }
         }
-        //-------------------------------------------ЗАПИСЬ---Complete-Quest-Существ--Фреавелла---1------------------------
+        //-------------------------------------------ЗАПИСЬ---Complete-Quest-Существ--Фреавелла---1--------Для-выполнения----------------
         public void RecordFreavellQuestMonstersComplete()
         {
             if (GetFreavellQuestMonstersComplete() >= 20 && GetFreavellQuestMonstersComplete() != 1)
@@ -136,7 +136,7 @@ namespace Game.QuestSystem
                 return 0;
             }
         }
-        //-------------------------------------------ЗАПИСЬ---Complete-Quest-Существ--Фреавелла---2------------------------
+        //-------------------------------------------ЗАПИСЬ---Complete-Quest-Существ--Фреавелла---2-------Для-выполнения-----------------
         public void RecordFreavellQuestMonstersCompleteTwo()
         {
             if (GetFreavellQuestMonstersComplete() >= 60 && GetFreavellQuestMonstersCompleteTwo() != 1)
@@ -226,7 +226,7 @@ namespace Game.QuestSystem
                 }
             }
         }
-        //-------------------------------------------ЗАПИСЬ---Complete-Quest-Farm--Ресурсов--Фреавелла---4------------------------
+        //-------------------------------------------ЗАПИСЬ---Complete-Quest-Farm--Ресурсов--Фреавелла---4----Для-выполнения-------------------
         public void RecordFreavellQuestFarmComplete()
         {
             if (GetFreavellQuestFarmComplete() >= 20 && GetFreavellQuestFarmComplete() != 1)
@@ -275,7 +275,7 @@ namespace Game.QuestSystem
                 return 0;
             }
         }
-        //-------------------------------------------ЗАПИСЬ---Complete-Quest-Farm--Фреавелла---5------------------------
+        //-------------------------------------------ЗАПИСЬ---Complete-Quest-Farm--Фреавелла---5-----Для-выполнения-------------------
         public void RecordFreavellQuestFarmCompleteTwo()
         {
             if (GetFreavellQuestFarmComplete() >= 60 && GetFreavellQuestFarmCompleteTwo() != 1)
